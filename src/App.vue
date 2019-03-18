@@ -1,5 +1,6 @@
 <template>
   <div id="app">
+    <!-- <frameview/> -->
     <div id="nav">
       <router-link to="/">Home</router-link> |
       <router-link to="/about">About</router-link>
@@ -8,6 +9,21 @@
   </div>
 </template>
 
+
+<script>
+import frameview from '@/components/frame.vue'
+// const renderer = require("../src/assets/js/renderer.js")
+// export default {
+  
+// }
+export default {
+  name: 'frame',
+  components: {
+    frameview
+  }
+}
+</script>
+
 <style>
 #app {
   font-family: 'Avenir', Helvetica, Arial, sans-serif;
@@ -15,6 +31,7 @@
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
+  padding-top: 30px;
 }
 #nav {
   padding: 30px;
@@ -27,5 +44,8 @@
 
 #nav a.router-link-exact-active {
   color: #42b983;
+}
+body {
+  margin: 0;
 }
 </style>
