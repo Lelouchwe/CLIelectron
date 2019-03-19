@@ -1,6 +1,7 @@
 <template>
   <div id="app">
     <!-- <frameview/> -->
+    <Menu></Menu>
     <div id="nav">
       <router-link to="/">Home</router-link> |
       <router-link to="/about">About</router-link>
@@ -12,14 +13,16 @@
 
 <script>
 import frameview from '@/components/frame.vue'
+import Menu from '@/components/Menu.vue'
 // const renderer = require("../src/assets/js/renderer.js")
 // export default {
-  
+
 // }
 export default {
   name: 'frame',
   components: {
-    frameview
+    frameview,
+    Menu
   }
 }
 </script>
