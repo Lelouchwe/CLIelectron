@@ -2,11 +2,11 @@
   <div id="app">
     <!-- <frameview/> -->
     <Menu></Menu>
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
+    <button @click="go('login')">Login</button>
+    <button @click="go('home')">Home</button>
+    <div class="content">
+      <router-view></router-view>
     </div>
-    <router-view/>
   </div>
 </template>
 
@@ -23,6 +23,11 @@ export default {
   components: {
     frameview,
     Menu
+  },
+  methods:{
+    go:function (url) {
+      this.$router.push({name:`${url}`});
+    }
   }
 }
 </script>
@@ -68,4 +73,11 @@ ul{
 li{
   cursor: pointer;
 }
+  .content{
+    width: 75%;
+    margin-left: 25%;
+  }
+  button{
+    color: #0a1829;
+  }
 </style>
