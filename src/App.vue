@@ -1,28 +1,50 @@
 <template>
-  <div id="app">
-    <!-- <frameview/> -->
-    <Menu></Menu>
-    <button @click="go('login')">Login</button>
-    <button @click="go('home')">Home</button>
-    <div class="content">
-      <router-view></router-view>
-    </div>
-  </div>
-</template>
+  <v-app>
+  <toolbar></toolbar>
 
+    <!--<v-toolbar app>
+      <v-toolbar-title class="headline text-uppercase">
+        <span>Vuetify</span>
+        <span class="font-weight-light">MATERIAL DESIGN</span>
+      </v-toolbar-title>
+      <v-spacer></v-spacer>
+      <v-btn
+        flat
+        href="https://github.com/vuetifyjs/vuetify/releases/latest"
+        target="_blank"
+      >
+        <span class="mr-2">Latest Release</span>
+      </v-btn>
+    </v-toolbar>-->
+    <Menu/>
+    <v-content class="view">
+        <v-container>
+          <v-layout>
+            <v-btn @click="go('login')">Login!</v-btn>
+            <v-btn @click="go('home')">Home</v-btn>
+            <router-view></router-view>
+          </v-layout>
+        </v-container>
+    </v-content>
+  </v-app>
+</template>
 
 <script>
 import frameview from '@/components/frame.vue'
+import toolbar from '@/components/toolbar.vue'
 import Menu from '@/components/Menu.vue'
-// const renderer = require("../src/assets/js/renderer.js")
-// export default {
 
-// }
 export default {
   name: 'frame',
   components: {
+    Menu,
     frameview,
-    Menu
+    toolbar
+  },
+  data () {
+    return {
+      //
+    }
   },
   methods:{
     go:function (url) {
@@ -31,53 +53,10 @@ export default {
   }
 }
 </script>
-
-<style>
-  @import url("https://fonts.googleapis.com/css?family=Montserrat:200,300,400,600");
-
-  #app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  padding-top: 30px;
-}
-#nav {
-  padding: 30px;
-}
-
-#nav a {
-  font-weight: bold;
-  color: #2c3e50;
-}
-
-#nav a.router-link-exact-active {
-  color: #42b983;
-}
-body {
-  margin: 0;
-}
-*{
-  font-family: 'Montserrat', sans-serif;
-  color: #eee;
-}
-body{
-  color: #eee;
-  margin: 0;
-}
-ul{
-  list-style: none;
-  padding-inline-start: 10px;
-}
-li{
-  cursor: pointer;
-}
-  .content{
+<style scoped>
+  .view{
     width: 75%;
+    padding: 0px;
     margin-left: 25%;
-  }
-  button{
-    color: #0a1829;
   }
 </style>

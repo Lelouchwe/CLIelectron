@@ -69,6 +69,9 @@
 </script>
 
 <style scoped>
+    *{
+        color: #f0f0f0;
+    }
     .side_menu_container{
         width: 25%;
         position: fixed;
