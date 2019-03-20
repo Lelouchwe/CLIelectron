@@ -28,7 +28,9 @@ export default {
 </script>
 
 <style>
-#app {
+  @import url("https://fonts.googleapis.com/css?family=Montserrat:200,300,400,600");
+
+  #app {
   font-family: 'Avenir', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -50,5 +52,20 @@ export default {
 }
 body {
   margin: 0;
+}
+*{
+  font-family: 'Montserrat', sans-serif;
+  color: #eee;
+}
+body{
+  color: #eee;
+  margin: 0;
+}
+ul{
+  list-style: none;
+  padding-inline-start: 10px;
+}
+li{
+  cursor: pointer;
 }
 </style>
