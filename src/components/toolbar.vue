@@ -1,17 +1,4 @@
 <template>
-    <!-- <v-toolbar app>
-        <v-toolbar-title class="headline text-uppercase">
-            <span>Playform</span>
-        </v-toolbar-title>
-        <v-spacer></v-spacer>
-        <v-btn
-                flat
-                href="https://github.com/vuetifyjs/vuetify/releases/latest"
-                target="_blank"
-        >
-            <span class="mr-2">Latest Release</span>
-        </v-btn>
-    </v-toolbar> -->
     <div class="title_bar">
       <div class="name_app">
       <p>Super</p>
@@ -109,7 +96,7 @@
   display: flex;
   background-color: #1a1d21;
   width: 100%;
-  height: 30px;
+  height: 24px;
   position: fixed;
   overflow: hidden;
 }
@@ -122,7 +109,7 @@
 }
 .name_app p {
   color: white;
-  font-size: 17px;
+  font-size: 16px;
   letter-spacing: 0.1em;
   margin: 0 auto;
   padding-left: 10px;

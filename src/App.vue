@@ -59,7 +59,7 @@ export default {
 <style scoped>
   .element::-webkit-scrollbar { width: 0; }
   .wrapper {
-    margin-top: 30px;
+    margin-top: 24px;
   }
   .view{
     width: 75%;
