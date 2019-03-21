@@ -16,6 +16,7 @@
         <span class="mr-2">Latest Release</span>
       </v-btn>
     </v-toolbar>-->
+    <div class="wrapper">
     <Menu/>
     <v-content class="view">
         <v-container>
@@ -26,6 +27,8 @@
           </v-layout>
         </v-container>
     </v-content>
+    </div>
+    
   </v-app>
 </template>
 
@@ -54,6 +57,10 @@ export default {
 }
 </script>
 <style scoped>
+  .element::-webkit-scrollbar { width: 0; }
+  .wrapper {
+    margin-top: 30px;
+  }
   .view{
     width: 75%;
     padding: 0px;

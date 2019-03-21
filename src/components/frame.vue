@@ -1,5 +1,5 @@
 <template>
-<div class="title_bar">
+<!-- <div class="title_bar">
     <div class="name_app">
     <p>agregator</p>
     </div>
@@ -8,9 +8,32 @@
     <button id="minmax-button" class="minmax-button"/>
     <button id="close-button" class="close-button"/>
     </div>
-</div>
+</div> -->
+<div class="title_bar">
+      <div class="name_app">
+      <p>agregator</p>
+      </div>
+      <div class="windows_control_container">
+     <!-- <button id="minimize-button" class="minimize-button"/>  -->
+        <button id="minimize-button" class="minimize-button">
+            <span></span>
+        </button>
+        <!-- <button id="minmax-button" class="minmax-button"></button>  -->
+        <button id="minmax-button" class="minmax-button">
+            <span></span>
+        </button>
+        <!-- <span id="close-button" class="close-button"> </span>  -->
+        <button id="close-button" class="close-button">
+            <span></span>
+        </button>
+      </div>
+    </div>
+
 </template>
 <script>
+export default {
+        name: "titlebar"
+}
 //     const {remote} = require('electron')
 
 //     document.getElementById('minimize-button').addEventListener('click', () => {
