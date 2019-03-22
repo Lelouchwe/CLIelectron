@@ -9,17 +9,17 @@ const app = express();
 
 app.use(bodyParser.json());
 app.use(cors());
+app.use(bodyParser.urlencoded({extended: false}))
 
 const port = process.env.PORT || 5000;
 
-
-const mongoURL = 'mongodb://<dbuser>:<dbpassword>@ds119996.mlab.com:19996/users';
+const mongoURL = 'mongodb://admin:admin123@ds119996.mlab.com:19996/users'
 
 mongoose.connect(mongoURL, {useNewUrlParser: true})
     .then(() => console.log("mongoDB Connected"))
     .catch(err => console.log(err))
 
-const Users = require("./routes/api/registr");
+const Users = require("./routes/Users");
 
 app.use("/users", Users)
 app.listen (port, () => console.log(`Server startanul eba port ${port}`));
