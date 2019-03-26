@@ -7,7 +7,7 @@
             <span>{{current_menu_item}}</span>
             <div v-if="item.subItems" class="side_items_menu_wrapper" :id="item.id">
                 <div v-if="item.id===activeMenuItemID" v-for="(subitem, j) in item.subItems" :key="j" class="sub_menu_item">
-                    {{subitem.name}}
+                    <router-link :to="subitem.path">{{subitem.name}}</router-link>
                 </div>
             </div>
         </div>
@@ -33,13 +33,16 @@
                         id:'store_sub',
                         subItems:[
                             {
-                                name:'Просмотр игр'
+                                name:'Просмотр игр',
+                                path:'/'
                             },
                             {
-                                name:'Акции'
+                                name:'Акции',
+                                path:'/'
                             },
                             {
-                                name:'Бесплатные игры'
+                                name:'Бесплатные игры',
+                                path:'/'
                             }
                         ]
                     },
@@ -48,10 +51,8 @@
                         id:'Lib',
                         subItems:[
                             {
-                                name:'Name1',
-                            },
-                            {
-                                name:'Name2'
+                                name:'My games',
+                                path:'mygames'
                             }
                         ]
                     }
@@ -61,7 +62,7 @@
         methods:{
             load(){
                 this.current_menu_item =  this.$store.getters.GETMASG;
-            },
+            }
         },
         computed:{
         }
