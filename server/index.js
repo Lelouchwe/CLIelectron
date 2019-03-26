@@ -13,6 +13,8 @@ app.use(bodyParser.urlencoded({extended: false}))
 
 const port = process.env.PORT || 5000;
 
+// const port = process.env.WEBPACK_DEV_SERVER_URL
+
 const mongoURL = 'mongodb://admin:admin123@ds119996.mlab.com:19996/users'
 
 mongoose.connect(mongoURL, {useNewUrlParser: true})
