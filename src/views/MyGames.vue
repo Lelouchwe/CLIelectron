@@ -129,9 +129,7 @@
     width: 15%;
     background-color: rgba(8, 8, 15, 0.8);
 }
-    .list-tile{
-        padding-left: 15px;
-    }
+    .list-tile{padding-left: 15px;}
     .list{
         background: transparent;
         width: 100%;
