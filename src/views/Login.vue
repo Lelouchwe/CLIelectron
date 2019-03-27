@@ -12,8 +12,8 @@
                             {{error}}
                         </v-alert>
                         <v-form>
-                            <v-text-field v-show="reg" color="secondary" prepend-icon="mail" name="email" label="e-mail" type="email" required v-model="name" :rules="emailRules"></v-text-field>
-                            <v-text-field prepend-icon="person" name="login" label="login" type="text" required v-model="login"></v-text-field>
+                            <v-text-field color="secondary" prepend-icon="mail" name="email" label="e-mail" type="email" required v-model="name" :rules="emailRules"></v-text-field>
+                            <v-text-field v-show="reg" prepend-icon="person" name="login" label="login" type="text" required v-model="login"></v-text-field>
                             <v-text-field id="password" prepend-icon="lock" name="password" label="Password" type="password" required v-model="password"
                                           :rules="passwordRules"></v-text-field>
                             <v-text-field v-show="reg" id="password" prepend-icon="lock" name="password" label="Confirm password" type="password" required v-model="password"
