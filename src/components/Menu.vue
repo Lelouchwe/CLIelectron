@@ -4,13 +4,13 @@
         @mouseenter="activeMenuItemID = item.id"
         @mouseleave="activeMenuItemID=''">
             <span>{{item.name}}</span>
-            <span>{{current_menu_item}}</span>
             <div v-if="item.subItems" class="side_items_menu_wrapper" :id="item.id">
                 <div v-if="item.id===activeMenuItemID" v-for="(subitem, j) in item.subItems" :key="j" class="sub_menu_item">
                     <router-link :to="subitem.path">{{subitem.name}}</router-link>
                 </div>
             </div>
         </div>
+        <v-btn to="/login" flat>Login</v-btn>
     </div>
 </template>
 

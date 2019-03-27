@@ -6,8 +6,8 @@
     <v-content class="view">
         <v-container>
           <v-layout>
-            <v-btn @click="go('login')">Login!</v-btn>
-            <v-btn @click="go('home')">Home</v-btn>
+            <!--<v-btn @click="go('login')">Login!</v-btn>-->
+            <!--<v-btn @click="go('home')">Home</v-btn>-->
             <router-view></router-view>
           </v-layout>
         </v-container>
