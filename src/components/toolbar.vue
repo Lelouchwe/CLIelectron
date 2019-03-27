@@ -5,15 +5,15 @@
       </div>
       <div class="windows_control_container">
      <!-- <button id="minimize-button" class="minimize-button"/>  -->
-        <button id="minimize-button" class="minimize-button">
-            <span></span>
+        <button id="minimize-button" class="minimize-button" v-on:click.once="minimize">
+            <span></span> 
         </button>
         <!-- <button id="minmax-button" class="minmax-button"></button>  -->
-        <button id="minmax-button" class="minmax-button">
+        <button id="minmax-button" class="minmax-button" v-on:click.once="minmax">
             <span></span>
         </button>
         <!-- <span id="close-button" class="close-button"> </span>  -->
-        <button id="close-button" class="close-button">
+        <button id="close-button" class="close-button" v-on:click.once="close">
             <span></span>
         </button>
       </div>
@@ -21,52 +21,19 @@
 </template>
 
 <script>
-    // const {remote} = require('electron')
-
-    // document.getElementById('minimize-button').addEventListener('click', () => {
-    // remote.getCurrentWindow().minimize()
-    // })
-    // document.getElementById('minmax-button').addEventListener('click', () => {
-    // const CurrentWindow = remote.getCurrentWindow()
-    // if (CurrentWindow.isMaximized()) {
-    //     CurrentWindow.unmaximize()
-    // } else {
-    //     CurrentWindow.maximize()
-    // }
-    // })
-    // document.getElementById('close-button').addEventListener('click', () => {
-    // remote.app.quit()
-    // })
     export default {
         name: "toolbar",
-        // data () {
-        //     const {remote} = require('electron')
-
-        //     document.getElementById('minimize-button').addEventListener('click', () => {
-        //         remote.getCurrentWindow().minimize()
-        //     })
-        //     document.getElementById('minmax-button').addEventListener('click', () => {
-        //         const CurrentWindow = remote.getCurrentWindow()
-        //         if (CurrentWindow.isMaximized()) {
-        //             CurrentWindow.unmaximize()
-        //         } else {
-        //             CurrentWindow.maximize()
-        //         }
-        //     })
-        //     document.getElementById('close-button').addEventListener('click', () => {
-        //         remote.app.quit()
-        //     })
-
-
-        // },
         methods:{
-            go:function (){
-            const {remote} = require('electron')
+            async minimize () {
+              const {remote} = require('electron')
 
-            document.getElementById('minimize-button').addEventListener('click', () => {
+            await document.getElementById('minimize-button').addEventListener('click', () => {
                 remote.getCurrentWindow().minimize()
-            })
-            document.getElementById('minmax-button').addEventListener('click', () => {
+                })
+            },
+             async minmax(){
+              const {remote} = require('electron')
+             await document.getElementById('minmax-button').addEventListener('click', () => {
                 const CurrentWindow = remote.getCurrentWindow()
                 if (CurrentWindow.isMaximized()) {
                     CurrentWindow.unmaximize()
@@ -74,11 +41,13 @@
                     CurrentWindow.maximize()
                 }
             })
-            document.getElementById('close-button').addEventListener('click', () => {
+            },
+            async close () {
+              const {remote} = require('electron')
+              document.getElementById('close-button').addEventListener('click', () => {
                 remote.app.quit()
             })
-
-        }
+            }
         }
     }
  
