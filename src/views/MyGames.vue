@@ -39,6 +39,7 @@
 
                         </div>
                     </v-list-group>
+                    <v-btn @click="clearFilters">Clear All Filters</v-btn>
                 </v-list>
             </v-layout>
     </v-container>
@@ -116,6 +117,13 @@
                 filters:[],
                 platforms:[],
                 search:null
+            }
+        },
+        methods:{
+            clearFilters(){
+                this.filters = [];
+                this.platforms = [];
+                this.search = null;
             }
         }
     }

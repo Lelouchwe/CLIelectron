@@ -3,6 +3,7 @@ import Router from 'vue-router'
 import Home from './views/Home.vue'
 import Login from './views/Login'
 import MyGames from './views/MyGames'
+import GlobalStore from './views/GlobalStore'
 
 Vue.use(Router);
 
@@ -15,6 +16,11 @@ export default new Router({
       name: 'home',
       component: Home,
       redirect:'/login'
+    },
+    {
+      path:'/globalstore',
+      name:'globalStore',
+      component:GlobalStore
     },
     {
       path: '/about',

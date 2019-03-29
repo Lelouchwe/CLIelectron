@@ -34,7 +34,7 @@
                         subItems:[
                             {
                                 name:'Просмотр игр',
-                                path:'/'
+                                path:'/globalstore'
                             },
                             {
                                 name:'Акции',
