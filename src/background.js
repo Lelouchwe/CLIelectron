@@ -17,6 +17,10 @@ const winURL = process.env.NODE_ENV === 'development'
 // Standard scheme must be registered before the app is ready
 protocol.registerStandardSchemes(['app'], { secure: true })
 function createWindow () {
+  //Create server window
+  // app = require('../server/index')();
+  // hiddenWindow = new BrowserWindow({show: false})
+  // hiddenWindow.loadURL('file://', __dirname, '../server/index.html')
   // Create the browser window.
   win = new BrowserWindow({ minWidth: 1200, minHeight: 600, frame: false })
 
@@ -28,9 +32,9 @@ function createWindow () {
   } else {
     createProtocol('app')
     // Load the index.html when not in development
-    win.loadURL('app://./index.html')
+    // win.loadURL('app://./index.html')
     // win.loadUrl(winURL)
-    // win.loadUrl('http://localhost:5000')
+    win.loadUrl('http://localhost:5000')
   }
 
   win.on('closed', () => {

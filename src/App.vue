@@ -18,7 +18,7 @@
 </template>
 
 <script>
-import frameview from '@/components/frame.vue'
+// import frameview from '@/components/frame.vue'
 import toolbar from '@/components/toolbar.vue'
 import Menu from '@/components/Menu.vue'
 
@@ -26,7 +26,7 @@ export default {
   name: 'frame',
   components: {
     Menu,
-    frameview,
+    // frameview,
     toolbar
   },
   data () {
