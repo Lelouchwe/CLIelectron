@@ -2,7 +2,7 @@
     <v-container fluid>
         <v-layout align-center justify-center>
             <v-flex xs12 sm8 md6>
-                <v-card class="elevation-12">
+                <v-card color="#202225" class="elevation-12">
                     <v-toolbar dark>
                         <v-toolbar-title>{{title}}</v-toolbar-title>
                         <v-spacer></v-spacer>
@@ -12,7 +12,7 @@
                             {{error}}
                         </v-alert>
                         <v-form>
-                            <v-text-field color="secondary" prepend-icon="mail" name="email" label="e-mail" type="email" required v-model="name" :rules="emailRules"></v-text-field>
+                            <v-text-field color="indigo" prepend-icon="mail" name="email" label="e-mail" type="email" required v-model="name" :rules="emailRules"></v-text-field>
                             <v-text-field v-show="reg" prepend-icon="person" name="login" label="login" type="text" required v-model="login"></v-text-field>
                             <v-text-field id="password" prepend-icon="lock" name="password" label="Password" type="password" required v-model="password"
                                           :rules="passwordRules"></v-text-field>
@@ -23,10 +23,10 @@
                     </v-card-text>
                     <v-card-actions>
                         <v-btn flat v-show="reg" color="secondary" @click.prevent="goToLogin" :disabled="processing || valid">Log In</v-btn>
-                        <v-btn v-show="!reg" color="secondary" :disabled="processing || valid">Sing In</v-btn>
+                        <v-btn v-show="!reg" color="indigo" :disabled="processing || valid" dark>Sing In</v-btn>
                         <v-spacer></v-spacer>
                         <v-btn v-show="!reg" flat color="secondary" @click.prevent="goToReg" :disabled="processing || valid">Registration</v-btn>
-                        <v-btn v-show="reg" color="secondary" :disabled="processing || valid">Sing Up</v-btn>
+                        <v-btn v-show="reg" color="indigo" :disabled="processing || valid" dark>Sing Up</v-btn>
                     </v-card-actions>
                 </v-card>
             </v-flex>
