@@ -2,17 +2,15 @@
     <v-container fluid>
         <v-layout align-center justify-center>
             <v-flex xs12 sm8 md6>
-                <v-card color="#202225" class="elevation-12">
-                    <v-toolbar dark>
-                        <v-toolbar-title>{{title}}</v-toolbar-title>
-                        <v-spacer></v-spacer>
-                    </v-toolbar>
+                <v-card color="#202225" class="elevation-12" dark>
+                    <v-card-title>{{title}}</v-card-title>
+                    <v-divider></v-divider>
                     <v-card-text>
                         <v-alert :value="error" type="warning">
                             {{error}}
                         </v-alert>
                         <v-form>
-                            <v-text-field color="indigo" prepend-icon="mail" name="email" label="e-mail" type="email" required v-model="name" :rules="emailRules"></v-text-field>
+                            <v-text-field prepend-icon="mail" name="email" label="e-mail" type="email" required v-model="name" :rules="emailRules"></v-text-field>
                             <v-text-field v-show="reg" prepend-icon="person" name="login" label="login" type="text" required v-model="login"></v-text-field>
                             <v-text-field id="password" prepend-icon="lock" name="password" label="Password" type="password" required v-model="password"
                                           :rules="passwordRules"></v-text-field>

@@ -11,12 +11,17 @@
             </div>
         </div>
         <v-btn to="/login" flat>Login</v-btn>
+        <profile-widget></profile-widget>
     </div>
 </template>
 
 <script>
+    import ProfileWidget from '@/components/ProfileWidget.vue'
     export default {
         name: "Menu",
+        components:{
+          ProfileWidget
+        },
         data(){
             return{
                 activeMenuItem:false,

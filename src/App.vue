@@ -41,10 +41,13 @@ export default {
   .element::-webkit-scrollbar { width: 0; }
   .wrapper {
     margin-top: 24px;
+      height: 100%;
   }
   .view{
     width: 75%;
     padding: 0px;
     margin-left: 25%;
+    background-color: #36393c;
+      height: 100%;
   }
 </style>
