@@ -1,22 +1,34 @@
 <template>
     <v-card class="container">
-        <div class="side_list">
-            <v-list two-line subheader v-for="(item,i) in items" :key="i">
-                <v-subheader>{{item.title}}</v-subheader>
-                <v-list-tile v-for="(it,j) in item.lst" :key="j">
-                    <v-list-tile-content>{{it.title}}</v-list-tile-content>
-                </v-list-tile>
-            </v-list>
-        </div>
-        <div class="content">
-            <v-btn
-                    color="primary"
-                    flat
-                    @click="closeDialog"
-            >
-                CLOSE
-            </v-btn>
-        </div>
+        <v-layout row justify-space-around>
+            <v-flex md3>
+                <div>
+                    <v-list two-line subheader v-for="(item,i) in items" :key="i" dark>
+                        <v-subheader>{{item.title}}</v-subheader>
+                        <v-list-tile v-for="(elem,j) in item.lst" :key="j" @click="currentItem = elem">
+                            <v-list-tile-content>{{elem.title}}</v-list-tile-content>
+                        </v-list-tile>
+                    </v-list>
+                </div>
+            </v-flex>
+            <v-flex md7>
+                <v-card dark>
+                  <v-card-title>{{currentItem.title}}</v-card-title>
+
+                  <v-card-actions>
+                          <v-btn
+                                  color="primary"
+                                  flat
+                                  @click="closeDialog"
+                          >
+                              CLOSE
+                          </v-btn>
+                  </v-card-actions>
+                </v-card>
+            </v-flex>
+        </v-layout>
+
+
     </v-card>
     <!--<v-card v-on:keyup.esc="closeDialog">
         <v-card-title
@@ -55,13 +67,10 @@
                       title:'Настройки пользователя',
                       lst:[
                           {
-                              title:'Учётная Запис'
+                              title:'Учётная Запис',
                           },
                           {
-                              title:'Учётная Запис'
-                          },
-                          {
-                              title:'Учётная Запис'
+                              title:'Чат'
                           }
                       ]
                   },
@@ -69,17 +78,13 @@
                       title:'Настройки приложения',
                       lst:[
                           {
-                              title:'Учётная Запис'
+                              title:'Выбор темы'
                           },
-                          {
-                              title:'Учётная Запис'
-                          },
-                          {
-                              title:'Учётная Запис'
-                          }
+
                       ]
                   }
-              ]
+              ],
+              currentItem:{title:'Учётная Запис'}
           }
         },
         methods:{
@@ -99,11 +104,10 @@
     }
     .side_list{
         height: 100%;
-        width: 30%;
-        background: darkgray;
+        width: 25%;
     }
     .content{
-        width: 70%;
+        width: 75%;
     }
 
 </style>
