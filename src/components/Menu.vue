@@ -79,7 +79,7 @@
         color: #f0f0f0;
     }
     .side_menu_container{
-        width: 25%;
+        width: 20%;
         position: fixed;
         height: 100vh;
         background-color: #27272d;

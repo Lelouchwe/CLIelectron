@@ -44,9 +44,9 @@ export default {
       height: 100%;
   }
   .view{
-    width: 75%;
+    width: 80%;
     padding: 0px;
-    margin-left: 25%;
+    margin-left: 20%;
     background-color: #36393c;
       height: 100%;
   }
