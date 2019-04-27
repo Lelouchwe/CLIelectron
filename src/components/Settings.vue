@@ -1,19 +1,19 @@
 <template>
     <v-card class="container">
         <v-layout row justify-space-around>
-            <v-flex md3>
+            <v-flex md3 class="mt-5">
                 <div>
                     <v-list two-line subheader v-for="(item,i) in items" :key="i" dark>
                         <v-subheader>{{item.title}}</v-subheader>
-                        <v-list-tile v-for="(elem,j) in item.lst" :key="j" @click="currentItem = elem">
+                        <v-list-tile v-for="(elem,j) in item.lst" :key="j" @click="selectedItem = elem">
                             <v-list-tile-content>{{elem.title}}</v-list-tile-content>
                         </v-list-tile>
                     </v-list>
                 </div>
             </v-flex>
-            <v-flex md7>
+            <v-flex md7 class="mt-5">
                 <v-card dark>
-                  <v-card-title>{{currentItem.title}}</v-card-title>
+                  <v-card-title>{{selectedItem.title}}</v-card-title>
 
                   <v-card-actions>
                           <v-btn
@@ -27,8 +27,6 @@
                 </v-card>
             </v-flex>
         </v-layout>
-
-
     </v-card>
     <!--<v-card v-on:keyup.esc="closeDialog">
         <v-card-title
@@ -84,7 +82,7 @@
                       ]
                   }
               ],
-              currentItem:{title:'Учётная Запис'}
+              selectedItem:{title:'Учётная Запис'}
           }
         },
         methods:{

@@ -45,7 +45,7 @@
         bottom: 0;
         left: 0;
         height: 55px;
-        width: 25%;
+        width: 20%;
         padding: 10px 10px 10px 20px;
         display: flex;
         align-content: center;
