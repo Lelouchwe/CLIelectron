@@ -32,9 +32,9 @@ function createWindow () {
   } else {
     createProtocol('app')
     // Load the index.html when not in development
-    // win.loadURL('app://./index.html')
+    win.loadURL('app://./index.html')
     // win.loadUrl(winURL)
-    win.loadUrl('http://localhost:5000')
+    // win.loadUrl('http://localhost:5000')
   }
 
   win.on('closed', () => {
