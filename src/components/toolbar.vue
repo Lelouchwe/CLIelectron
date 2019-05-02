@@ -9,7 +9,7 @@
             <span></span> 
         </button>
         <!-- <button id="minmax-button" class="minmax-button"></button>  -->
-        <button id="minmax-button" class="minmax-button" v-on:click.stop.prevent="minmax">
+        <button id="minmax-button" class="minmax-button" v-on:click.once="minmax">
             <span></span>
         </button>
         <!-- <span id="close-button" class="close-button"> </span>  -->

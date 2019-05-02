@@ -11,9 +11,9 @@ const isDevelopment = process.env.NODE_ENV !== 'production'
 // be closed automatically when the JavaScript object is garbage collected.
 let win
 
-const winURL = process.env.NODE_ENV === 'development'
-  ? `http://localhost:5000`
-  : `file://${__dirname}/index.html`
+// const winURL = process.env.NODE_ENV === 'development'
+//   ? `http://localhost:5000`
+//   : `file://${__dirname}/index.html`
 // Standard scheme must be registered before the app is ready
 protocol.registerStandardSchemes(['app'], { secure: true })
 function createWindow () {
@@ -32,9 +32,9 @@ function createWindow () {
   } else {
     createProtocol('app')
     // Load the index.html when not in development
-    // win.loadURL('app://./index.html')
+    win.loadURL('app://./index.html')
     // win.loadUrl(winURL)
-    win.loadUrl('http://localhost:5000')
+    // win.loadUrl('http://localhost:5000')
   }
 
   win.on('closed', () => {
