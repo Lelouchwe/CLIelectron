@@ -12,11 +12,11 @@
                             <v-list-tile>
                                 <v-list-tile-content>
                                     <v-list-tile-title>{{ item.title }}</v-list-tile-title>
-                                    <v-list-tile-sub-title v-if="item.title==='filters' && filters.length>0">
+                                    <v-list-tile-sub-title v-if="item.title==='filters' && filters.length>0" class="white--text">
                                         {{filters}}</v-list-tile-sub-title>
-                                    <v-list-tile-sub-title v-else-if="item.title==='platforms' && platforms.length>0">
+                                    <v-list-tile-sub-title v-else-if="item.title==='platforms' && platforms.length>0" class="white--text">
                                         {{platforms}}</v-list-tile-sub-title>
-                                    <v-list-tile-sub-title v-else-if="item.title==='search' && search!==null">
+                                    <v-list-tile-sub-title v-else-if="item.title==='search' && search!==null" class="white--text">
                                         {{search}}</v-list-tile-sub-title>
                                 </v-list-tile-content>
                             </v-list-tile>

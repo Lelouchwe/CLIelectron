@@ -6,25 +6,23 @@
                     <v-card-title>{{title}}</v-card-title>
                     <v-divider></v-divider>
                     <v-card-text>
-                        <v-alert :value="error" type="warning">
+                        <!--<v-alert :value="error" type="warning">
                             {{error}}
-                        </v-alert>
+                        </v-alert>-->
                         <v-form>
-                            <v-text-field prepend-icon="mail" name="email" label="e-mail" type="email" required v-model="name" :rules="emailRules"></v-text-field>
+                            <v-text-field prepend-icon="mail" name="email" label="e-mail" type="email" required v-model="name"></v-text-field>
                             <v-text-field v-show="reg" prepend-icon="person" name="login" label="login" type="text" required v-model="login"></v-text-field>
-                            <v-text-field id="password" prepend-icon="lock" name="password" label="Password" type="password" required v-model="password"
-                                          :rules="passwordRules"></v-text-field>
-                            <v-text-field v-show="reg" id="password" prepend-icon="lock" name="password" label="Confirm password" type="password" required v-model="password"
-                                          :rules="passwordRules"></v-text-field>
+                            <v-text-field id="password" prepend-icon="lock" name="password" label="Password" type="password" required v-model="password"></v-text-field>
+                            <v-text-field v-show="reg" id="password" prepend-icon="lock" name="password" label="Confirm password" type="password" required v-model="password"></v-text-field>
 
                         </v-form>
                     </v-card-text>
                     <v-card-actions>
-                        <v-btn flat v-show="reg" color="secondary" @click.prevent="goToLogin" :disabled="processing || valid">Log In</v-btn>
-                        <v-btn v-show="!reg" color="indigo" :disabled="processing || valid" dark>Sing In</v-btn>
+                        <v-btn flat v-show="reg" color="secondary" @click.prevent="goToLogin">Log In</v-btn>
+                        <v-btn v-show="!reg" color="indigo" dark>Sing In</v-btn>
                         <v-spacer></v-spacer>
-                        <v-btn v-show="!reg" flat color="secondary" @click.prevent="goToReg" :disabled="processing || valid">Registration</v-btn>
-                        <v-btn v-show="reg" color="indigo" :disabled="processing || valid" dark>Sing Up</v-btn>
+                        <v-btn v-show="!reg" flat color="secondary" @click.prevent="goToReg">Registration</v-btn>
+                        <v-btn v-show="reg" color="indigo" dark>Sing Up</v-btn>
                     </v-card-actions>
                 </v-card>
             </v-flex>
